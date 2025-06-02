@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Matrix Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Matrix Calculator</h1>
+
+    <div class="controls">
+        <label for="rows">Rows:</label>
+        <input type="number" id="rows" value="3" min="1">
+        <label for="cols">Columns:</label>
+        <input type="number" id="cols" value="3" min="1">
+        <button id="generateBtn">Generate Matrix</button>
+        <br>
+        <br>
+        <label for="rowOP">Operation (Target = Target ± Scalar * Source):</label>
+        <br>
+        <span>Target R</span><input type="number" id="row2" value="1" min="1">
+        <span>Target R</span><input type="number" id="row2_display" value="1" min="1" disabled
+            style="background-color: #eee;"> 
+        <input type="text" id="opType" value="+">
+        <input type="number" id="r2scalar" value="1" min="0">
+        <span>* R</span><input type="number" id="row1" value="1" min="1">
+        <button id="opBtn">Apply Operation</button>
+        <br>
+        <br>
+        <label for="invRow">Inverse Row:</label>
+        <input type="number" id="invRow" value="1" min="1">
+        <button id="invBtn">Inverse Row</button>
+        <br>
+        <br>
+    </div>
+
+    <div class="matrix-container">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+    --primary-color: #919191;
+    --secondary-color: #ffffff;
+    --back-color: #9b9b9b;
+    --back-color-alt: #eeeeee;
+    --accent-color: #343434;
+    --shadow: 0 0 0.3125em rgba(0, 0, 0, 0.179);
+    --border-radius-large: 0.5em;
+    --border-radius-small: 0.3em;
+    --border-thin: 0.0625em solid var(--primary-color);
+    --spacing-small: 0.3125em;
+    --spacing-medium: 0.625em;
+    --spacing-large: 1.25em;
+    --transition-ease: all 0.3s ease;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+::-moz-selection {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+    width: var(--spacing-medium);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: var(--border-radius-large);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    margin: 0;
+    padding: var(--spacing-large);
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Cookie', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: var(--accent-color);
+    border: none;
+    background-color: var(--back-color);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+}
+
+.matrix-container {
+    display: grid;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-large);
+    border: none;
+    border-radius: var(--border-radius-large);
+    background-color: var(--back-color-alt);
+    box-shadow: var(--shadow);
+}
+
+.matrix-cell,
+.controls button,
+.controls input[type="number"],
+.controls input[type="text"] {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1em;
+}
+
+.matrix-cell {
+    width: 100%;
+    height: 1.875em;
+    padding: var(--spacing-small);
+    box-sizing: border-box;
+    border: var(--border-thin);
+    border-radius: var(--border-radius-large);
+    text-align: center;
+    transition: var(--transition-ease);
+    outline: none;
+}
+
+.matrix-cell:focus,
+.controls input[type="number"]:focus,
+.controls input[type="text"]:focus {
+    background-color: var(--secondary-color);
+    color: #161616;
+    outline: none;
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.controls {
+    margin-bottom: var(--spacing-medium);
+    font-size: 1.1em;
+    padding: 1em;
+    border: none;
+    border-radius: var(--border-radius-large);
+    color: var(--secondary-color);
+    background-color: var(--back-color);
+    box-shadow: var(--shadow);
+}
+
+.controls label {
+    margin-right: var(--spacing-small);
+}
+
+.controls button {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--border-radius-small);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition-ease);
+}
+
+.controls button:hover {
+    box-shadow: var(--shadow);
+}
+
+.controls input[type="number"] {
+    width: 3.125em;
+    margin-right: var(--spacing-small);
+    text-align: center;
+    border: var(--border-thin);
+    border-radius: var(--border-radius-small);
+    transition: var(--transition-ease);
+}
+
+.controls input[type="text"] {
+    width: 1.875em;
+    margin-right: var(--spacing-small);
+    text-align: center;
+    border: var(--border-thin);
+    border-radius: var(--border-radius-small);
+}
+
+.controls span {
+    margin-right: var(--spacing-small);
+}
+
+.colLabel,
+.rowLabel {
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
